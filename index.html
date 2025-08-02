@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Majestic Sierra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="hero">
+<!-- In your HTML file -->
+<h1 class="site-title" aria-label="Majestic-Sierra">
+  Majestic-Sierra
+</h1>
+
+  <div class="quote-block">
+<p class="quote-text">
+  "In traditional operating models, scale inevitably reaches a point at which it delivers diminishing returns.
+  But we don't necessarily see this with AI-driven models, in which the return on scale can continue to climb to
+  <span class="word1">previously</span>
+  <span class="word2">unheard</span>
+  <span class="word3">of</span>
+  <span class="word4">levels</span>."
+</p>
+    <p class="quote-attribution">
+      — Marco Iansiti and Karim R. Lakhani, <em>Competing in the Age of AI</em>, Published Jan–Feb 2020
+    </p>
+  </div>
+</header>
+
+
+  <!-- Company Cards Block -->
+  <div id="company-cards"></div>
+
+  <!-- Data Centers Block -->
+  <div id="data-centers"></div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+<script>
+  async function loadComponent(id, file) {
+    const response = await fetch(file);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  // Load company-cards.html, then run main.js
+  loadComponent("company-cards", "company-cards.html").then(() => {
+    const script = document.createElement("script");
+    script.src = "js/main.js"; // adjust path if needed
+    document.body.appendChild(script);
+  });
+
+  loadComponent("data-centers", "data-centers.html");
+  loadComponent("footer", "footer.html");
+</script>
+
+</body>
+</html>
