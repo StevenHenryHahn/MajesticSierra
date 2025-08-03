@@ -57,14 +57,7 @@
     document.getElementById(id).innerHTML = html;
   }
 
-  // Load company-cards.html, then run main.js
-  loadComponent("company-cards", "company-cards.html").then(() => {
-    const script = document.createElement("script");
-    script.src = "js/main.js"; // adjust path if needed
-    document.body.appendChild(script);
-  });
-
-  loadComponent("data-centers", "data-centers.html");
+  // Load footer
   loadComponent("footer-container", "footer.html");
 </script>
 
