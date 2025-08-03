@@ -2,67 +2,139 @@
   {
     "name": "Microsoft",
     "website": "https://www.microsoft.com",
-    "careers": "https://careers.microsoft.com",
+    "category": "software",
     "description": "Developer of Azure AI and Copilot; a leader in enterprise AI solutions and cloud infrastructure."
   },
   {
     "name": "Apple",
     "website": "https://www.apple.com",
-    "careers": "https://www.apple.com/careers",
+     "category": "chips",
     "description": "Integrates AI across consumer devices, with a focus on privacy-driven machine learning and on-device intelligence."
   },
   {
     "name": "Nvidia",
     "website": "https://www.nvidia.com",
-    "careers": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+     "category": "chips",
     "description": "Core provider of GPUs powering modern AI workloads, with advances in generative AI and edge computing."
   },
   {
     "name": "Google",
     "website": "https://www.google.com",
-    "careers": "https://careers.google.com",
+     "category": "software",
     "description": "Pioneers in AI research and deployment through DeepMind, Gemini, and Google Cloud AI platforms."
   },
   {
     "name": "Meta",
     "website": "https://www.meta.com",
-    "careers": "https://www.metacareers.com",
+     "category": "software",
     "description": "Invests in large-scale AI models for language, vision, and open-source frameworks through FAIR and LLaMA."
   },
   {
     "name": "Amazon",
     "website": "https://www.amazon.com",
-    "careers": "https://www.amazon.jobs",
+     "category": "software",
     "description": "AI powers everything from Alexa to AWS's AI/ML infrastructure and forecasting services."
   },
   {
     "name": "IBM",
     "website": "https://www.ibm.com",
-    "careers": "https://www.ibm.com/careers",
+     "category": "chips",
     "description": "Legacy innovator in enterprise AI via Watsonx, with deep vertical expertise in regulated industries."
   },
   {
     "name": "Adobe",
     "website": "https://www.adobe.com",
-    "careers": "https://www.adobe.com/careers",
+     "category": "software",
     "description": "Blends creative tools with generative AI through Adobe Firefly and Sensei, reshaping digital workflows."
   },
   {
     "name": "Palantir",
     "website": "https://www.palantir.com",
-    "careers": "https://www.palantir.com/careers",
+     "category": "software",
     "description": "Specializes in AI-driven data integration and operational intelligence for government and commercial sectors."
   },
   {
     "name": "Tesla",
     "website": "https://www.tesla.com",
-    "careers": "https://www.tesla.com/careers",
+     "category": "software",
     "description": "Leverages AI for autonomous driving, energy optimization, and robotics through Dojo and FSD architectures."
   },
   {
   "name": "CoreWeave",
   "website": "https://www.coreweave.com",
-  "careers": "https://www.coreweave.com/careers",
+   "category": "datacenters",
   "description": "Specialized cloud provider optimized for AI workloads, offering GPU infrastructure for training and inference at scale."
-}
+  },
+  {
+    "name": "OpenAI",
+    "website": "https://www.openai.com",
+     "category": "software",
+    "description": "Known for GPT models powering natural language generation and reasoning."
+  },
+  {
+    "name": "Anthropic",
+    "website": "https://www.anthropic.com",
+     "category": "software",
+    "description": "Pushing alignment research and large language model safety initiatives."
+  },
+  {
+    "name": "Cohere",
+    "website": "https://www.cohere.com",
+     "category": "software",
+    "description": "Focuses on natural language understanding and generation with enterprise-grade AI models."
+  },
+  {
+    "name": "Stability AI",
+    "website": "https://www.stability.ai",
+     "category": "software",
+    "description": "Known for open-source generative models like Stable Diffusion, democratizing access to AI creativity."
+  },
+  {
+    "name": "Navitas",
+    "website": "https://navitassemi.com/",
+     "category": "chips",
+    "description": "AI Power Roadmap to 12-kW power supply units (PSU) for AI datacenters, focusing on energy efficiency and sustainability."
+  },
+  {
+    "name": "Graphcore",
+    "website": "https://www.graphcore.ai",
+     "category": "chips",
+    "description": "Develops IPUs (Intelligence Processing Units) optimized for AI and machine learning workloads."
+  },
+  {
+    "name": "Cerebras Systems",
+    "website": "https://www.cerebras.net",
+     "category": "chips",
+    "description": "Known for the Wafer Scale Engine, the largest chip ever built, designed specifically for AI training."
+  },
+  {
+    "name": "Ampere Computing",
+    "website": "https://www.amperecomputing.com",
+     "category": "chips",
+    "description": "Focuses on high-performance ARM-based processors for cloud and AI applications."
+  },
+  {
+    "name": "Marvell",
+    "website": "https://www.marvell.com",
+     "category": "chips",
+    "description": "Provides networking and storage solutions optimized for AI workloads, including data center interconnects."
+  },
+  {
+    "name": "Alibaba Cloud",
+    "website": "https://www.alibabacloud.com",
+     "category": "datacenters",
+    "description": "Offers AI and machine learning services through its cloud platform, with a focus on scalability and performance."
+  },
+  {
+    "name": "Tencent Cloud",
+    "website": "https://www.tencentcloud.com",
+     "category": "datacenters",
+    "description": "Provides AI solutions integrated with its vast ecosystem, including gaming, social media, and enterprise services."
+  },
+    {
+    "name": "Vertiv",
+    "website": "https://www.vertiv.com/en-us/",
+     "category": "datacenters",
+    "description": "Solving the power and cooling complexities of the AI revolution."
+  } 
 ]

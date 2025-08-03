@@ -14,19 +14,7 @@ body {
 }
 
 
-/*
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #043070;
-  background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
-  background-repeat: repeat;
-  color: #333;
-  background-repeat: repeat;
-  color: #333;
-}
-*/
+
 
 h1, h2, h3 {
   margin: 0;
@@ -52,7 +40,7 @@ a:hover {
 .hero {
   background: url('images/aimountains.png') no-repeat center bottom;
   background-size: cover; /* Optional: scales the image nicely */
-  height: 400px;           /* Ensures it's visible */
+  height: 200px;           /* Ensures it's visible */
   color: white;            /* Contrast for text */
   text-align: center;
 }
@@ -90,6 +78,14 @@ header h1 {
   
   
   margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #aa1a1a;
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
 
@@ -193,8 +189,14 @@ header p {
   border-radius: 8px;
   padding: 16px;
   margin: 16px auto;
-  max-width: 700px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 400px; /* Ensures cards are not too narrow */
+  max-width: fit-content; /* Allows cards to expand based on content */
+  width: 100%;      /* Ensures cards take full width of their container */
+  min-height: 220px;  /* Ensures cards have a minimum height */
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  display: inline;        /* Ensures cards are inline */
+  text-align: left;
+  vertical-align: top; /* Aligns cards to the top */
   transition: box-shadow 0.2s ease;
 }
 
@@ -222,9 +224,16 @@ header p {
   color: #4312c9;
 }
 
+
+
 /* ------------------------------
    Footer Styling
 --------------------------------- */
+
+#footer-container {
+  margin-top: 10vh; /* Layout spacing between body and footer */
+}
+
 footer {
   background-color: #f5935b;
   text-align: center;
@@ -254,6 +263,21 @@ footer {
     display: block;
     margin-bottom: 8px;
   }
+
+ .hero {
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .quote-block {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
 }
 
 
@@ -264,3 +288,83 @@ footer {
   100% { background-color: #04204f; }  /* Return to calm blue */
 }
 
+
+
+
+/* ------------------------------
+   AI Tree Blobs Placeholder
+--------------------------------- */
+
+#ai-tree-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: 64px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.blob {
+  width: 560px;
+  padding: 32px 48px;
+  border-radius: 50% / 40%;
+  background: linear-gradient(145deg, #f2f2f2, #dcdcdc);
+  box-shadow: 6px 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  font-size: 2.4rem;
+}
+
+.blob:hover {
+  transform: scale(1.05);
+}
+
+.blob a {
+  display: block;
+  color: #0e263d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.canopy {
+  background: radial-gradient(circle at top, #8dd17e, #64ac5f);
+}
+
+.trunk {
+  background: radial-gradient(circle at center, #a7895f, #8e6f45);
+}
+
+.roots {
+  background: radial-gradient(circle at bottom, #679aa1, #3c6b76);
+}
+
+.ai-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #0e263d;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #333;
+}

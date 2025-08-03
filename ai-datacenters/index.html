@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌱 AI Datacenters</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <header class="hero">
+      <h1 class="site-title" aria-label="Majestic-Sierra">Majestic Sierra</h1>
+        <h2 class="page-title">🌱 AI Datacenters</h2>
+        <div class="quote-block">
+        <p class="quote-text">
+          Explore firms hosting datacenters catering to AI companies.
+        </p>
+      </div>
+    </header>
+
+
+ <main>
+  <section class="ai-cards" aria-label="Company Listings">
+    <!-- Cards injected here -->
+  </section>
+</main>
+
+
+  <!-- Footer Wrapper -->
+  <div id="footer-container">
+    <!-- Injected content from footer.html -->
+  </div>
+
+<script>
+  console.log("✅ ai-datacenters/index.html is running");
+
+  const PAGE_CATEGORY = "datacenters";
+
+  async function loadComponent(id, file) {
+    const response = await fetch(file);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  // Load footer
+  loadComponent("footer-container", "/footer.html");
+
+  // Load and render companies by category
+  fetch("/data/companies.json")
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to load JSON");
+      return res.json();
+    })
+    .then(data => {
+      const container = document.querySelector(".ai-cards");
+      if (!container) throw new Error("Missing .ai-cards container");
+
+      const filtered = data.filter(company => company.category === PAGE_CATEGORY);
+
+      if (filtered.length === 0) {
+        container.innerHTML = "<p>No companies found for this category.</p>";
+        return;
+      }
+
+      container.innerHTML = ""; // Clear placeholder content
+
+      filtered.forEach(company => {
+        const card = document.createElement("div");
+        card.className = "company-card";
+        card.innerHTML = `
+          <h2>${company.name}</h2>
+          <p>${company.description}</p>
+          <a href="${company.website}" target="_blank">Website</a> |
+          <a href="${company.careers}" target="_blank">Careers</a>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error("Error loading companies:", err));
+
+</script>
+
+</body>
+</html>

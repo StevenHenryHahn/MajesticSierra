@@ -21,7 +21,7 @@
   <span class="word1">previously</span>
   <span class="word2">unheard</span>
   <span class="word3">of</span>
-  <span class="word4">levels</span>."
+  <span class="word4">levels."</span>
 </p>
     <p class="quote-attribution">
       — Marco Iansiti and Karim R. Lakhani, <em>Competing in the Age of AI</em>, Published Jan–Feb 2020
@@ -30,14 +30,25 @@
 </header>
 
 
+<!-- AI Tree Visualization Block -->
+<section id="ai-tree-section">
+  <div class="blob canopy"><a href="/ai-software">🌿 AI Software Companies</a></div>
+  <div class="blob trunk"><a href="/ai-chips">🌳 AI Chip Companies</a></div>
+  <div class="blob roots"><a href="/ai-datacenters">🌱 AI Datacenters</a></div>
+</section>
+
+
+
   <!-- Company Cards Block -->
   <div id="company-cards"></div>
 
   <!-- Data Centers Block -->
   <div id="data-centers"></div>
 
-  <!-- Footer -->
-  <div id="footer"></div>
+  <!-- Footer Wrapper -->
+  <div id="footer-container">
+    <!-- Injected content from footer.html -->
+  </div>
 
 <script>
   async function loadComponent(id, file) {
@@ -54,7 +65,7 @@
   });
 
   loadComponent("data-centers", "data-centers.html");
-  loadComponent("footer", "footer.html");
+  loadComponent("footer-container", "footer.html");
 </script>
 
 </body>
