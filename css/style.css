@@ -40,7 +40,8 @@ a:hover {
 .hero {
   background: url('images/aimountains.png') no-repeat center bottom;
   background-size: cover; /* Optional: scales the image nicely */
-  height: 200px;           /* Ensures it's visible */
+  padding: 32px 16px;
+  min-height: 200px;
   color: white;            /* Contrast for text */
   text-align: center;
 }
@@ -276,10 +277,77 @@ footer {
   .quote-block {
     font-size: 0.9rem;
     line-height: 1.4;
-    padding: 0 10px;
+    padding: 4rem;
   }
 }
 
+
+.quote-divider-labeled {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.quote-divider-labeled::before,
+.quote-divider-labeled::after {
+  content: "";
+  flex: 1;
+  border-top: 2px solid #0e263d;
+  margin: 0 1rem;
+}
+
+.quote-divider-labeled span {
+  font-weight: 800;
+  color: #0e263d;
+  text-transform: uppercase;
+  font-size: 2.0rem;
+}
+
+
+/* === News Banner Title === */
+.news-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0e263d; /* ← Change this to whatever color you want */
+}
+
+
+/* === Scrolling News Banner === */
+.news-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #0e263d;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-top: 2px solid #f5935b;
+  border-bottom: 2px solid #f5935b;
+  position: relative;
+}
+
+.scrolling-headline {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollTicker 15s linear infinite;
+}
+
+@keyframes scrollTicker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.news-banner a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.news-banner a:hover {
+  text-decoration: underline;
+  color: #f5935b;
+}
 
 @keyframes sunriseGlow {
   0%   { background-color: #04204f; }  /* Deep Sierra blue */

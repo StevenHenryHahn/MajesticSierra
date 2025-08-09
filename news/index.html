@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Majestic Sierra // News Dispatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="main-layout">
+  <header class="site-header">
+    <h1 class="page-title">Majestic Sierra</h1>
+  </header>
+
+  <h2 class="page-subtitle">News Dispatch</h2>
+
+  <main class="news-archive">
+    <article id="eqt-data-campus" class="news-article">
+      <h2>EQT to Supply Natural Gas for Data Center Campus in Pennsylvania</h2>
+      <p>
+        EQT Corporation will serve as the exclusive natural gas supplier to the Homer City Energy Campus—a 3,200-acre AI and high-performance computing hub in Pennsylvania...
+      </p>
+      <p>
+        <a href="https://pgjonline.com/news/2025/july/eqt-to-supply-natural-gas-for-data-center-campus-in-pennsylvania" target="_blank" rel="noopener">
+          Read full article on Pipeline & Gas Journal
+        </a>
+      </p>
+    </article>
+  </main>
+
+  <footer id="footer-container"></footer>
+
+  <script>
+    async function loadComponent(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadComponent("footer-container", "../components/footer.html");
+  </script>
+</body>
+</html>
