@@ -359,6 +359,7 @@ footer {
 
 
 
+
 /* ------------------------------
    AI Tree Blobs Placeholder
 --------------------------------- */
@@ -435,4 +436,73 @@ footer {
 .card p {
   font-size: 1.1rem;
   color: #333;
+}
+
+
+/* ------------------------------
+   News articles bubbles
+--------------------------------- */
+
+.ai-news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+
+.news-bubble {
+  border-radius: 24px;
+  padding: 28px 36px;
+  margin: 32px auto;
+  max-width: 760px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  color: #300303;
+}
+
+.news-bubble:hover {
+  transform: scale(1.02);
+}
+
+.news-bubble h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #300303;
+}
+
+.news-bubble p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #f0300303f0f0;
+}
+
+.news-bubble a {
+  color: #ffe082;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-bubble a:hover {
+  text-decoration: underline;
+  color: #ffd54f;
+}
+
+
+/* ------------------------------
+   News articles color scheme
+--------------------------------- */
+
+
+.bubble-canopy {
+  background: radial-gradient(circle at top, #8dd17e, #64ac5f);
+}
+
+.bubble-trunk {
+  background: radial-gradient(circle at center, #a7895f, #8e6f45);
+}
+
+.bubble-roots {
+  background: radial-gradient(circle at bottom, #679aa1, #3c6b76);
 }
