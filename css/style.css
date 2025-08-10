@@ -490,6 +490,20 @@ footer {
 }
 
 
+
+.news-bubble.highlighted {
+  background: none !important; /* Clears any gradient */
+  background-color: #dd9254 !important; /* Forces the tint */
+  scroll-margin-top: 3rem;
+  transform: translate(-20px, -20px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+
+
 /* ------------------------------
    News articles color scheme
 --------------------------------- */
@@ -506,3 +520,6 @@ footer {
 .bubble-roots {
   background: radial-gradient(circle at bottom, #679aa1, #3c6b76);
 }
+
+
+
