@@ -1,0 +1,36 @@
+name: Fetch News Feed
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs hourly
+  workflow_dispatch:     # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./js
+
+      - name: Run news fetch script
+        run: node news-api-client.js
+        working-directory: ./js
+
+      - name: Commit updated feed
+        run: |
+          git config user.name "Majestic Bot"
+          git config user.email "bot@majestic-sierra.com"
+          git add ../data/news-feed.json
+          git commit -m "📰 Auto-update news feed"
+          git push
+        continue-on-error: true

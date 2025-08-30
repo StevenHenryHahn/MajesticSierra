@@ -9,7 +9,7 @@ function renderBanner(newsItems) {
   bannerItems.forEach(item => {
     const link = document.createElement('a');
     link.href = `news/index.html#${item.id}`;
-    link.textContent = item.headline;
+    link.textContent = item.headline || item.title || 'Untitled';
     link.style.marginRight = '2rem'; // spacing between headlines
 
     bannerSpan.appendChild(link);
