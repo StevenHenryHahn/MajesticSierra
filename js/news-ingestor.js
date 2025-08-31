@@ -29,22 +29,41 @@ const isBBCLinkValid = async (url) => {
   }
 };
 
+
+
 const rssSources = [
-  'https://feeds.npr.org/1001/rss.xml',
-  'http://feeds.bbci.co.uk/news/rss.xml'
+  { name: 'Yahoo Finance', url: 'https://finance.yahoo.com/news/rssindex' },
+  { name: 'MarketWatch', url: 'https://feeds.content.dowjones.io/public/rss/marketwatch/topstories' },
+  { name: 'Cointelegraph', url: 'https://cointelegraph.com/rss' },
+  { name: 'CNET', url: 'https://www.cnet.com/rss/news/' },
+  { name: 'Nasdaq Earnings', url: 'https://www.nasdaq.com/feed/rssoutbound?category=Earnings' },
+  { name: 'MIT Tech Review', url: 'https://www.technologyreview.com/topic/artificial-intelligence/rss' },
+  { name: 'The Verge AI', url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml' },
+  { name: 'BBC Technology', url: 'http://feeds.bbci.co.uk/news/technology/rss.xml' },
+  { name: 'Stanford HAI', url: 'https://hai.stanford.edu/news/blog/rss.xml' },
+  { name: 'AI Weekly Digest', url: 'https://aiweeklyreport.substack.com/feed' },
+  { name: 'VentureBeat AI', url: 'https://venturebeat.com/category/ai/feed/' },
+  { name: 'TechCrunch AI', url: 'http://feeds.feedburner.com/TechCrunch/ArtificialIntelligence' },
+  { name: 'Wired AI', url: 'https://www.wired.com/feed/category/science/ai/latest/rss' },
+  { name: 'NPR', url: 'https://feeds.npr.org/1001/rss.xml'}
 ];
 
 async function ingestAllNews() {
   const rssArticles = [];
 
-  for (const url of rssSources) {
-    try {
-      const articles = await fetchRSSFeed(url);
-      rssArticles.push(...articles);
-    } catch (err) {
-      console.warn(`Failed to fetch RSS from ${url}:`, err.message);
-    }
+for (const { name, url } of rssSources) {
+  try {
+    const articles = await fetchRSSFeed(url);
+    const tagged = articles.map(article => ({
+      ...article,
+      sourceName: name,
+      sourceUrl: url
+    }));
+    rssArticles.push(...tagged);
+  } catch (err) {
+    console.warn(`Failed to fetch RSS from ${name}:`, err.message);
   }
+}
 
 const fs = require('fs');
 const path = require('path');
