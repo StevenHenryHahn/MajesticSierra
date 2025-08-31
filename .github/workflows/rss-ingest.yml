@@ -1,0 +1,28 @@
+name: RSS Ingestion Scheduler
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs hourly (UTC)
+  workflow_dispatch:     # Allows manual trigger from GitHub UI
+
+jobs:
+  ingest-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ingestion script
+        run: node ingest-news.js
+
+      - name: Log timestamp
+        run: echo "Ingestion completed at $(date -u)"
