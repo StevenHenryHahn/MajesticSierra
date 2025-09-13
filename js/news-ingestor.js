@@ -1,4 +1,5 @@
 // news-ingestor.js
+const fetch = require('node-fetch'); // if you're using CommonJS
 const { fetchRSSFeed } = require('./rss-client');
 const { fetchNewsAPIArticles } = require('./news-api-client'); // optional
 const curatedArticles = require('../data/manual-news.json');
