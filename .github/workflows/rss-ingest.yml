@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run ingestion script
-        run: node ingest-news.js
+        run: node js/news-ingestor.js
 
       - name: Log timestamp
         run: echo "Ingestion completed at $(date -u)"
