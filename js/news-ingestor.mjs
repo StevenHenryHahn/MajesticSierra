@@ -4,7 +4,7 @@ import { fetchRSSFeed } from './rss-client.js';
 import { fetchNewsAPIArticles } from './news-api-client.js'; // optional
 import curatedArticles from '../data/manual-news.json' assert { type: 'json' };
 import { normalizeArticle } from './normalize-article.js';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
