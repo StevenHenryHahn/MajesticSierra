@@ -1,12 +1,15 @@
 // news-ingestor.js
 import fetch from 'node-fetch'; // ES Module-compatible
-const { fetchRSSFeed } = require('./rss-client');
-const { fetchNewsAPIArticles } = require('./news-api-client'); // optional
-const curatedArticles = require('../data/manual-news.json');
-const { normalizeArticle } = require('./normalize-article');
+
+
+import { fetchRSSFeed } from './rss-client.js';
+import { fetchNewsAPIArticles } from './news-api-client.js'; // optional
+import curatedArticles from '../data/manual-news.json' assert { type: 'json' };
+import { normalizeArticle } from './normalize-article.js';
+
 
 // 🔹 BBC Validator
-const cheerio = require('cheerio');
+import cheerio from 'cheerio';
 
 const isBBCLinkValid = async (url) => {
   try {
@@ -66,8 +69,10 @@ for (const { name, url } of rssSources) {
   }
 }
 
-const fs = require('fs');
-const path = require('path');
+
+import fs from 'fs';
+import path from 'path';
+
 
 const outputPath = path.join(__dirname, '../data/news-feed.json');
 fs.writeFileSync(outputPath, JSON.stringify(normalized, null, 2), 'utf-8');
@@ -105,4 +110,4 @@ fs.writeFileSync(outputPath, JSON.stringify(normalized, null, 2), 'utf-8');
   return normalized;
 }
 
-module.exports = { ingestAllNews };
+export { ingestAllNews };
