@@ -1,7 +1,7 @@
 // Top-level imports
 import fetch from 'node-fetch';
 import { fetchRSSFeed } from './rss-client.js';
-import { fetchNewsAPIArticles } from './news-api-client.js'; // optional
+import { fetchNewsAPIArticles } from './news-api-client.mjs';
 import curatedArticles from '../data/manual-news.json' assert { type: 'json' };
 import { normalizeArticle } from './normalize-article.js';
 import * as cheerio from 'cheerio';
