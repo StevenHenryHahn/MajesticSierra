@@ -4,7 +4,18 @@ function renderBanner(newsItems) {
 
   bannerSpan.innerHTML = ''; // Clear previous content
 
-  const bannerItems = newsItems.filter(item => item.showInBanner);
+// ✅ Select items for the banner with a limit
+  const bannerItems = newsItems
+  .filter(item => item.showInBannerOverride === true || item.showInBanner === true)
+  .slice(0, 8); // ✅ Limit to second number
+
+// Logging for debugging
+console.log('Banner items selected:', bannerItems.map(item => ({
+  title: item.title,
+  override: item.showInBannerOverride,
+  scoreBased: item.showInBanner
+})));
+
 
   bannerItems.forEach(item => {
     const link = document.createElement('a');

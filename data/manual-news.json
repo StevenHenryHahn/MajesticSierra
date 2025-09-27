@@ -17,6 +17,7 @@
   {
     "id": "curatedNews1000002",
     "showInBanner": true,
+    "showInBannerOverride": true,
     "headline": "AI Models Reshape Forecasting for Renewables",
     "summary": "Machine learning tools are improving accuracy in solar and wind output predictions.",
     "authorName": "Marcus Lee",

@@ -1,4 +1,6 @@
 function normalizeArticle(article) {
+  console.log('Normalizing:', article.title, 'Override:', article.showInBannerOverride);
+  
   return {
     id: article.id || generateId(article),
     headline: article.headline || article.title || 'Untitled',
@@ -9,7 +11,8 @@ function normalizeArticle(article) {
     publishDate: article.publishDate || article.publishedAt || new Date().toISOString(),
     isCurated: article.isCurated || false,
     priority: article.priority || 0,
-    showInBanner: article.showInBanner || article.bannerOverride || false
+    showInBanner: article.showInBanner || article.bannerOverride || false,
+    showInBannerOverride: article.showInBannerOverride === true
   };
 }
 
