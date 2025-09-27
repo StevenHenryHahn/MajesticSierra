@@ -97,18 +97,9 @@ for (const article of mappedNewArticles) {
 const mergedArticles = Array.from(mergedMap.values());
 
   // Normalize articles to ensure consistent structure
-const normalizeArticle = (article) => ({
-  id: article.id,
-  headline: article.title || article.headline || 'Untitled',
-  summary: article.summary || 'No summary available.',
-  sourceName: article.source || article.sourceName || 'Unknown',
-  sourceUrl: article.url || article.sourceUrl || `missing-url-${article.id}`,
-  publishedAt: article.publishedAt || article.publishDate || 'Unknown',
-  importanceScore: article.importanceScore ?? 0,
-  showInBanner: false,
-  categoryTag: article.category || 'General',
-  ...article
-});
+const { normalizeArticle } = require('./normalize-article');
+
+
 
     // 🏷️ Flag banner stories
 const normalizedArticles = mergedArticles.map(normalizeArticle);
