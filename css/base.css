@@ -1,0 +1,50 @@
+/* ------------------------------
+   Global Layout & Typography
+--------------------------------- */
+
+body {
+  background-color: #043070;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 8px,
+    rgba(0, 0, 0, 0.015) 8px,
+    rgba(0, 0, 0, 0.015) 16px
+  );
+}
+
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ------------------------------
+   Footer Styling
+--------------------------------- */
+
+footer {
+  background-color: #f5935b;
+  text-align: center;
+  padding: 24px 12px;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+}

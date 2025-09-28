@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Creator</title>
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/themes.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <a href="/" class="site-title-link"><h1 class="site-title">Majestic Sierra</h1></a>
+    <h2 class="page-title">🧭 About the Creator</h2>
+    <div class="quote-block">
+      <p class="quote-text">Built with purpose, precision, and civic clarity.</p>
+    </div>
+  </header>
+
+<main>
+    <div class="news-bubble">
+    <section class="site-about">
+      <h2>About Majestic Sierra</h2>
+      <p>Majestic Sierra is website dedicated to the rapidly evolving world of AI.  Rather than focusing strictly on the software of AI, 
+        the goal is more intended to showcase the infrastructure underlying it and, in particular, the companies that are building it.  
+        It is designed as a modular web platform that balances live AI-relevant news-feeds with editorial control from the site's creator,
+        Steve Hahn.
+      </p>
+    </section>
+
+    <section class="profile-card">
+      <div class="profile-flex">
+        <img src="/images/Steven_H_Hahn_b-low_MB_narrow.jpg" alt="Steven H. Hahn" class="profile-photo" />
+        <div class="profile-text">
+          <h2>Steven H. Hahn</h2>
+          <p>Steve Hahn has spent his life exploring the intersection of technology and finance. </p>
+          <p>He earned an MBA from the University of Southern California in the mid-1990s where he focused on the then-nascent Internet,
+             corporate-level infrastructure strategy, and database design for ERP-class systems.  Prior to that, he received a 
+             multidisciplinary BS from Babson College where he studied Finance/Investments and Economics.</p>
+          <p>Professionally, Steve has worked in roles spanning development of PeopleSoft Financials and multiple Energy Trading and Risk
+            Management (ETRM) systems.  Earlier in his career, he worked in accounting, helping a New Jersey-based CPA firm
+            transition from paper-based bookkeeping to computerized systems.</p>
+           <p> Majestic Sierra reflects Steve’s ongoing interest in modular systems, editorial clarity, and the infrastructure powering 
+            emerging technologies.
+           </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    loadComponent("footer-container", "../components/footer.html");
+  });
+</script>
+
+<!-- Footer Wrapper -->
+<div id="footer-container"></div>
+
+<script>
+  fetch("../components/footer.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("footer-container").innerHTML = html;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+
+
+/* ============================================
+   COMPONENTS.CSS
+   Reusable visual blocks used across pages:
+   - Hero banners
+   - Header titles and branding
+   - Company cards
+   - Quote blocks
+   - News banners
+   These define the editorial identity and layout
+   of modular sections within Majestic Sierra.
+============================================ */
+
+
+
+
+/* === HERO SECTION ===
+   Full-width visual banner with background image and centered text.
+   Used as the thematic lead-in for each page.
+   Includes scenic imagery, page title, and intro quote.
+*/   
+
+.hero {
+  background: url('images/aimountains.png') no-repeat center bottom;
+  background-size: cover; /* Optional: scales the image nicely */
+  padding: 32px 16px;
+  min-height: 200px;
+  color: white;            /* Contrast for text */
+  text-align: center;
+}
+
+
+/* ------------------------------
+   Header Styling
+--------------------------------- */
+header {
+  background-color: #f5935b;
+  text-align: center;
+  padding: 32px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  animation: sunriseGlow 10s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ------------------------------
+   Site Header Styling
+--------------------------------- */
+
+.site-header {
+  background-color: #f5935b;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #f5935b;
+}
+
+
+/* ------------------------------
+   Titles and Emphasis Styles
+--------------------------------- */
+
+.site-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.4), /* shadow behind stroke */
+   0 0 1px rgba(255, 255, 255, 0.3);  /* subtle glow edge */
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #aa1a1a;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+
+
+.emphasis {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #cc0000;
+  animation: darkenRed 2s infinite ease-in-out;
+}
+
+
+
+/* ------------------------------
+   Company Cards Styling
+--------------------------------- */
+
+
+.company-card {
+  background-color: #e08941;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px auto;
+  min-width: 400px; /* Ensures cards are not too narrow */
+  max-width: fit-content; /* Allows cards to expand based on content */
+  width: 100%;      /* Ensures cards take full width of their container */
+  min-height: 220px;  /* Ensures cards have a minimum height */
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  display: inline;        /* Ensures cards are inline */
+  text-align: left;
+  vertical-align: top; /* Aligns cards to the top */
+  transition: box-shadow 0.2s ease;
+}
+
+.company-card:hover {
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+}
+
+.company-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: 0e263d;
+  font-weight: 700;
+
+}
+
+.company-card a {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #0e263d;
+}
+
+.company-card a:hover {
+  color: #4312c9;
+}
+
+
+/* === CARD COMPONENT ===
+   Visual styling for card layout and content.
+   Includes hover effect and scoped typography.
+*/
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #0e263d;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+
+/* ------------------------------
+   Quote Block Styles
+--------------------------------- */
+
+.quote-block {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5935b;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.quote-attribution {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* ------------------------------
+   News Banner Styles  
+--------------------------------- */
+
+
+/* === News Banner Title === */
+.news-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0e263d; /* ← Change this to whatever color you want */
+}
+
+
+/* === Scrolling News Banner === */
+.news-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #0e263d;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-top: 2px solid #f5935b;
+  border-bottom: 2px solid #f5935b;
+  position: relative;
+}
+
+.news-banner a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.news-banner a:hover {
+  text-decoration: underline;
+  color: #f5935b;
+}
+
+.scrolling-headline {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollTicker 40s linear infinite;  /* Control the speed of the banner */
+}
+
+
+
+/* === WORD EMPHASIS CLASSES ===
+   Used for escalating visual emphasis on individual words.
+   Often applied in hero or quote sections.
+*/
+
+
+.word1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.word2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #b00000;
+}
+
+.word3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #990000;
+}
+
+.word4 {
+  font-size: 3.0rem;
+  font-weight: bold;
+  color: #660000;
+  animation: pulseRed 1.5s infinite ease-in-out;
+  animation: slideSlow 2s infinite ease-in-out;
+}
+
+
+
+/* === QUOTE DIVIDER LABELED ===
+   Horizontal separator used within quote blocks.
+   Includes centered label for thematic emphasis.
+   Visually breaks up content while reinforcing editorial tone.
+*/
+
+.quote-divider-labeled {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.quote-divider-labeled::before,
+.quote-divider-labeled::after {
+  content: "";
+  flex: 1;
+  border-top: 2px solid #0e263d;
+  margin: 0 1rem;
+}
+
+.quote-divider-labeled span {
+  font-weight: 800;
+  color: #0e263d;
+  text-transform: uppercase;
+  font-size: 2.0rem;
+}
+
+
+
+/* ------------------------------
+  AI TREE SECTION
+   Visual metaphor block representing layered AI structure.
+   Includes canopy, trunk, and roots for editorial hierarchy.
+   Used in #ai-tree-section container.
+--------------------------------- */
+
+#ai-tree-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: 64px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Migrated to layout.css
+.blob 
+*/
+
+.blob:hover {
+  transform: scale(1.05);
+}
+
+.blob a {
+  display: block;
+  color: #0e263d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.canopy {
+  background: radial-gradient(circle at top, #8dd17e, #64ac5f);
+}
+
+.trunk {
+  background: radial-gradient(circle at center, #a7895f, #8e6f45);
+}
+
+.roots {
+  background: radial-gradient(circle at bottom, #679aa1, #3c6b76);
+}
+
+
+/* === AI NEWS COMPONENT ===
+   Container and bubble styling for AI news feed.
+*/
+
+
+.ai-news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+
+.news-bubble {
+  border-radius: 24px;
+  padding: 28px 36px;
+  margin: 32px auto;
+  max-width: 760px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  background-color:  #dd9254 ;
+  color: #300303;
+}
+
+.news-bubble:hover {
+  transform: scale(1.02);
+}
+
+.news-bubble h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #300303;
+}
+
+.news-bubble a {
+  /*color: #ffe082; */
+  color:#4312c9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-bubble a:hover {
+  text-decoration: underline;
+  color: #da3807;
+}
+
+
+
+.news-bubble.highlighted {
+  background: none !important; /* Clears any gradient */
+  background-color: #f5d33d !important; /* Forces the tint */
+  color: #300303 !important;
+  scroll-margin-top: 3rem;
+  transform: translate(-20px, -20px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* === PROFILE PHOTO STYLING ===
+   Circular profile photo with border and shadow.
+   Used in about/index.html for author bio section.
+*/
+
+.profile-flex {
+  display: flex;
+  align-items: center;   /* ← This centers the image vertically */
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  height: 480px;              /* or whatever height fits your layout */
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: center;         /* ← This is the key fix */
+}
+
+.profile-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+
+/* === FOOTER CONTAINER ===
+   Wrapper for footer content and layout.
+   Used inside <footer> for modular styling.
+*/
+
+#footer-container footer {
+  font-size: 1.3rem;              /* Slightly larger than default */
+  color: #300303;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.footer-link {
+  font-size: 1.3rem;            /* Boosts visibility */
+  font-weight: bold;
+  color: #4312c9;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  margin-left: 12px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #da3807;
+}
+
+.footer-divider {
+  margin: 0 8px;
+  color: #999;
+  font-size: 1.2rem;            /* Optional: makes divider more visible */
+}

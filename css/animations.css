@@ -1,0 +1,78 @@
+
+/* ============================================
+   ANIMATIONS.CSS
+   Keyframe definitions and reusable motion styles
+   used across Majestic Sierra components.
+
+   Includes:
+   - Emphasis effects (e.g. pulsing red for alerts)
+   - Ambient transitions (e.g. sunrise glow for headers)
+   - Scrolling banners and dynamic movement
+
+   All animations are modular and override-safe.
+   Designed to enhance visual storytelling without
+   interfering with layout or editorial clarity.
+============================================ */
+
+
+
+
+/* === DARKEN RED ===
+   Used for emphasis text (e.g., .emphasis).
+   Creates a pulsing dark-red animation to draw attention.
+*/
+
+
+@keyframes darkenRed {
+  0%   { color: #cc0000; opacity: 1; }
+  50%  { color: #990000; opacity: 0.7; }
+  100% { color: #660000; opacity: 1; }
+}
+
+
+
+/* === SUNRISE GLOW ===
+   Used for header background animation.
+   Simulates a slow sunrise effect with shifting blue tones.
+   Adds ambient warmth and motion to top-of-page branding.
+*/
+
+
+@keyframes sunriseGlow {
+  0%   { background-color: #04204f; }  /* Deep Sierra blue */
+  50%  { background-color: #2e4d83; }  /* Cool morning sky */
+  75%  { background-color: #5b7fa6; }  /* Hints of warmth */
+  100% { background-color: #04204f; }  /* Return to calm blue */
+}
+
+
+
+
+/* === NEWS BANNER COMPONENT ===
+   Horizontal scrolling headline used for editorial updates.
+   Includes title, ticker animation, and link styling.
+*/
+
+@keyframes scrollTicker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+/* === SLIDE SLOW & PULSE RED ===
+   Used by .word4 for subtle motion and pulsing emphasis.
+*/
+
+@keyframes slideSlow {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+
+@keyframes pulseRed {
+  0%   { color: #cc0000; text-shadow: 0 0 2px rgba(204, 0, 0, 0.3); }
+  50%  { color: #ff3333; text-shadow: 0 0 6px rgba(255, 51, 51, 0.6); }
+  100% { color: #cc0000; text-shadow: 0 0 2px rgba(204, 0, 0, 0.3); }
+}

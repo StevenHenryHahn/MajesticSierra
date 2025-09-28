@@ -3,138 +3,492 @@
     "name": "Microsoft",
     "website": "https://www.microsoft.com",
     "category": "software",
-    "description": "Developer of Azure AI and Copilot; a leader in enterprise AI solutions and cloud infrastructure."
+    "tags": ["AI", "cloud", "enterprise", "infrastructure"],
+    "ownership": "public",
+    "ticker": "MSFT",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Redmond, WA, USA",
+    "description": "Developer of Azure AI and Copilot; a leader in enterprise AI solutions and cloud infrastructure.",
+    "careersUrl": "https://careers.microsoft.com/us/en"
   },
   {
     "name": "Apple",
     "website": "https://www.apple.com",
-     "category": "chips",
-    "description": "Integrates AI across consumer devices, with a focus on privacy-driven machine learning and on-device intelligence."
+    "category": "software",
+    "tags": ["AI", "consumer", "privacy", "on-device"],
+    "ownership": "public",
+    "ticker": "AAPL",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Cupertino, CA, USA",
+    "description": "Integrates AI across consumer devices, with a focus on privacy-driven machine learning and on-device intelligence.",
+    "careersUrl": "https://www.apple.com/careers/us/"
   },
   {
     "name": "Nvidia",
     "website": "https://www.nvidia.com",
-     "category": "chips",
-    "description": "Core provider of GPUs powering modern AI workloads, with advances in generative AI and edge computing."
+    "category": "chips",
+    "tags": ["AI", "GPUs", "data centers", "infrastructure"],    
+    "ownership": "public",
+    "ticker": "NVDA",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Santa Clara, CA, USA",
+    "description": "Core provider of GPUs powering modern AI workloads, with advances in generative AI and edge computing.",
+    "careersUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/"
   },
   {
     "name": "Google",
     "website": "https://www.google.com",
-     "category": "software",
-    "description": "Pioneers in AI research and deployment through DeepMind, Gemini, and Google Cloud AI platforms."
+    "category": "software",
+    "tags": ["AI", "search", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "GOOGL",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Mountain View, CA, USA",
+    "description": "Pioneers in AI research and deployment through DeepMind, Gemini, and Google Cloud AI platforms.",
+    "careersUrl": "https://careers.google.com/"
   },
   {
     "name": "Meta",
     "website": "https://www.meta.com",
-     "category": "software",
-    "description": "Invests in large-scale AI models for language, vision, and open-source frameworks through FAIR and LLaMA."
+    "category": "software",
+    "tags": ["AI", "social", "metaverse", "infrastructure"],
+    "ownership": "public",
+    "ticker": "META",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Menlo Park, CA, USA",
+    "description": "Invests in large-scale AI models for language, vision, and open-source frameworks through FAIR and LLaMA.",
+    "careersUrl": "https://www.metacareers.com/"
   },
   {
     "name": "Amazon",
     "website": "https://www.amazon.com",
-     "category": "software",
-    "description": "AI powers everything from Alexa to AWS's AI/ML infrastructure and forecasting services."
+    "category": "software",
+    "tags": ["AI", "cloud", "retail", "infrastructure"],
+    "ownership": "public",
+    "ticker": "AMZN",
+    "marketCapBucket": "+$1T",
+    "headquarters": "Seattle, WA, USA",
+    "description": "AI powers everything from Alexa to AWS's AI/ML infrastructure and forecasting services.",
+    "careersUrl": "https://www.amazon.jobs/en/"
   },
   {
     "name": "IBM",
     "website": "https://www.ibm.com",
-     "category": "chips",
-    "description": "Legacy innovator in enterprise AI via Watsonx, with deep vertical expertise in regulated industries."
+    "category": "chips",
+    "tags": ["AI", "enterprise", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "IBM",
+    "marketCapBucket": "$100B-$200B",
+    "headquarters": "Armonk, NY, USA",
+    "description": "Legacy innovator in enterprise AI via Watsonx, with deep vertical expertise in regulated industries.",
+    "careersUrl": "https://www.ibm.com/employment/"
   },
   {
     "name": "Adobe",
     "website": "https://www.adobe.com",
-     "category": "software",
-    "description": "Blends creative tools with generative AI through Adobe Firefly and Sensei, reshaping digital workflows."
+    "category": "software",
+    "tags": ["AI", "creative", "cloud", "enterprise"],
+    "ownership": "public",
+    "ticker": "ADBE",
+    "marketCapBucket": "$200B-$300B",
+    "headquarters": "San Jose, CA, USA",
+    "description": "Blends creative tools with generative AI through Adobe Firefly and Sensei, reshaping digital workflows.",
+    "careersUrl": "https://www.adobe.com/careers.html"
   },
   {
     "name": "Palantir",
     "website": "https://www.palantir.com",
-     "category": "software",
-    "description": "Specializes in AI-driven data integration and operational intelligence for government and commercial sectors."
+    "category": "software",
+    "tags": ["AI", "data", "enterprise", "government"],
+    "ownership": "public",
+    "ticker": "PLTR",
+    "marketCapBucket": "$20B-$50B",
+    "headquarters": "Denver, CO, USA",
+    "description": "Specializes in AI-driven data integration and operational intelligence for government and commercial sectors.",
+    "careersUrl": "https://www.palantir.com/careers/"
   },
   {
     "name": "Tesla",
     "website": "https://www.tesla.com",
-     "category": "software",
-    "description": "Leverages AI for autonomous driving, energy optimization, and robotics through Dojo and FSD architectures."
+    "category": "software",
+    "tags": ["AI", "autonomous", "energy", "infrastructure"],
+    "ownership": "public",
+    "ticker": "TSLA",
+    "marketCapBucket": "$500B-$1T",
+    "headquarters": "Palo Alto, CA, USA",
+    "description": "Leverages AI for autonomous driving, energy optimization, and robotics through Dojo and FSD architectures.",
+    "careersUrl": "https://www.tesla.com/careers"
   },
   {
-  "name": "CoreWeave",
-  "website": "https://www.coreweave.com",
-   "category": "datacenters",
-  "description": "Specialized cloud provider optimized for AI workloads, offering GPU infrastructure for training and inference at scale."
+    "name": "CoreWeave",
+    "website": "https://www.coreweave.com",
+    "category": "datacenters",
+    "tags": ["AI", "cloud", "GPUs", "infrastructure"],
+    "ownership": "public",
+    "ticker": "CRWV",
+    "marketCapBucket": "$25B-$100B",
+    "headquarters": "Los Angeles, CA, USA",
+    "description": "Specialized cloud provider optimized for AI workloads, offering GPU infrastructure for training and inference at scale.",
+    "careersUrl": "https://www.coreweave.com/careers"
   },
   {
     "name": "OpenAI",
     "website": "https://www.openai.com",
-     "category": "software",
-    "description": "Known for GPT models powering natural language generation and reasoning."
+    "category": "software",
+    "tags": ["AI", "research", "language models", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "San Francisco, CA, USA",
+    "description": "Known for GPT models powering natural language generation and reasoning.",
+    "careersUrl": "https://www.openai.com/careers"
   },
   {
     "name": "Anthropic",
     "website": "https://www.anthropic.com",
-     "category": "software",
-    "description": "Pushing alignment research and large language model safety initiatives."
+    "category": "software",
+    "tags": ["AI", "alignment", "language models", "research"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "San Francisco, CA, USA",
+    "description": "Pushing alignment research and large language model safety initiatives.",
+    "careersUrl": "https://www.anthropic.com/careers"
   },
   {
     "name": "Cohere",
     "website": "https://www.cohere.com",
-     "category": "software",
-    "description": "Focuses on natural language understanding and generation with enterprise-grade AI models."
+    "category": "software",
+    "tags": ["AI", "language models", "enterprise", "NLP"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Toronto, Canada",
+    "description": "Focuses on natural language understanding and generation with enterprise-grade AI models.",
+    "careersUrl": "https://www.cohere.com/careers"
   },
   {
     "name": "Stability AI",
     "website": "https://www.stability.ai",
-     "category": "software",
-    "description": "Known for open-source generative models like Stable Diffusion, democratizing access to AI creativity."
+    "category": "software",
+    "tags": ["AI", "generative", "open-source", "models"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "London, UK",
+    "description": "Known for open-source generative models like Stable Diffusion, democratizing access to AI creativity.",
+    "careersUrl": "https://www.stability.ai/careers"
   },
   {
     "name": "Navitas",
     "website": "https://navitassemi.com/",
-     "category": "chips",
-    "description": "AI Power Roadmap to 12-kW power supply units (PSU) for AI datacenters, focusing on energy efficiency and sustainability."
+    "category": "chips",
+    "tags": ["AI", "GaN", "power efficiency", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Fremont, CA, USA",
+    "description": "AI Power Roadmap to 12-kW power supply units (PSU) for AI datacenters, focusing on energy efficiency and sustainability.",
+    "careersUrl": "https://navitassemi.com/careers/"
   },
   {
     "name": "Graphcore",
     "website": "https://www.graphcore.ai",
-     "category": "chips",
-    "description": "Develops IPUs (Intelligence Processing Units) optimized for AI and machine learning workloads."
+    "category": "chips",
+    "tags": ["AI", "IPU", "machine learning", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Bristol, UK",
+    "description": "Develops IPUs (Intelligence Processing Units) optimized for AI and machine learning workloads.",
+    "careersUrl": "https://www.graphcore.ai/careers"
   },
   {
     "name": "Cerebras Systems",
     "website": "https://www.cerebras.net",
-     "category": "chips",
-    "description": "Known for the Wafer Scale Engine, the largest chip ever built, designed specifically for AI training."
+    "category": "chips",
+    "tags": ["AI", "WSE", "machine learning", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Los Altos, CA, USA",
+    "description": "Known for the Wafer Scale Engine, the largest chip ever built, designed specifically for AI training.",
+    "careersUrl": "https://www.cerebras.net/careers/"
   },
   {
     "name": "Ampere Computing",
     "website": "https://www.amperecomputing.com",
-     "category": "chips",
-    "description": "Focuses on high-performance ARM-based processors for cloud and AI applications."
+    "category": "chips",
+    "tags": ["AI", "ARM", "processors", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Santa Clara, CA, USA",
+    "description": "Focuses on high-performance ARM-based processors for cloud and AI applications.",
+    "careersUrl": "https://www.amperecomputing.com/careers/"
   },
   {
     "name": "Marvell",
     "website": "https://www.marvell.com",
-     "category": "chips",
-    "description": "Provides networking and storage solutions optimized for AI workloads, including data center interconnects."
+    "category": "chips",
+    "tags": ["AI", "infrastructure", "networking", "storage"],
+    "ownership": "public",
+    "ticker": "MRVL",
+    "marketCapBucket": "$50B-$100B",
+    "headquarters": "Santa Clara, CA, USA",
+    "description": "Provides networking and storage solutions optimized for AI workloads, including data center interconnects.",
+    "careersUrl": "https://www.marvell.com/careers/"
   },
   {
     "name": "Alibaba Cloud",
     "website": "https://www.alibabacloud.com",
-     "category": "datacenters",
-    "description": "Offers AI and machine learning services through its cloud platform, with a focus on scalability and performance."
+    "category": "datacenters",
+    "tags": ["AI", "cloud", "infrastructure", "enterprise"],
+    "ownership": "public",
+    "ticker": "BABA",
+    "marketCapBucket": "$200B-$300B",
+    "headquarters": "Hangzhou, China",
+    "description": "Leading cloud provider in Asia, offering AI and machine learning services integrated with its e-commerce ecosystem.",
+    "careersUrl": "https://www.alibabacloud.com/careers"
   },
   {
     "name": "Tencent Cloud",
     "website": "https://www.tencentcloud.com",
-     "category": "datacenters",
-    "description": "Provides AI solutions integrated with its vast ecosystem, including gaming, social media, and enterprise services."
+    "category": "datacenters",
+    "tags": ["AI", "cloud", "gaming", "infrastructure"],
+    "ownership": "public",
+    "ticker": "TCEHY",
+    "marketCapBucket": "$300B-$400B",
+    "headquarters": "Shenzhen, China",
+    "description": "Provides AI solutions integrated with its vast ecosystem, including gaming, social media, and enterprise services.",
+    "careersUrl": "https://www.tencent.com/en-us/careers.html"
   },
     {
     "name": "Vertiv",
     "website": "https://www.vertiv.com/en-us/",
-     "category": "datacenters",
-    "description": "Solving the power and cooling complexities of the AI revolution."
-  } 
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "power", "cooling"],
+    "ownership": "public",
+    "ticker": "VRT",
+    "marketCapBucket": "$5B-$10B",
+    "headquarters": "Columbus, OH, USA",
+    "description": "Solving the power and cooling complexities of the AI revolution.",
+    "careersUrl": "https://www.vertiv.com/en-us/about-us/careers/"
+  },
+  {
+    "name": "Switch",
+    "website": "https://www.switch.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "sustainability", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Las Vegas, NV, USA",
+    "description": "Operates some of the most advanced and sustainable data centers globally, optimized for AI workloads.",
+    "careersUrl": "https://www.switch.com/about/careers/"
+  },
+  {
+    "name": "Digital Realty",
+    "website": "https://www.digitalrealty.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "DLR",
+    "marketCapBucket": "$40B-$60B",
+    "headquarters": "Austin, TX, USA",
+    "description": "Global provider of data center solutions, supporting AI and cloud workloads with extensive infrastructure.",
+    "careersUrl": "https://www.digitalrealty.com/careers"
+  },
+  {
+    "name": "Equinix",
+    "website": "https://www.equinix.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "interconnection", "infrastructure"],
+    "ownership": "public",
+    "ticker": "EQIX",
+    "marketCapBucket": "$70B-$90B",
+    "headquarters": "Redwood City, CA, USA",
+    "description": "Leading global interconnection and data center company, enabling AI and cloud ecosystems.",
+    "careersUrl": "https://www.equinix.com/careers"
+  } ,
+  {
+    "name": "QTS Realty Trust",
+    "website": "https://www.qtsdatacenters.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "QTS",
+    "marketCapBucket": "$5B-$10B",
+    "headquarters": "Overland Park, KS, USA",
+    "description": "Provides data center solutions with a focus on security and compliance for AI and cloud workloads.",
+    "careersUrl": "https://www.qtsdatacenters.com/careers"
+  } ,
+  {
+    "name": "Iron Mountain",
+    "website": "https://www.ironmountain.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "security", "infrastructure"],
+    "ownership": "public",
+    "ticker": "IRM",
+    "marketCapBucket": "$10B-$20B",
+    "headquarters": "Boston, MA, USA",
+    "description": "Offers secure data center solutions, including colocation and cloud services for AI workloads.",
+    "careersUrl": "https://www.ironmountain.com/careers"
+  } ,
+  {
+    "name": "CyrusOne",
+    "website": "https://www.cyrusone.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "CONE",
+    "marketCapBucket": "$10B-$20B",
+    "headquarters": "Dallas, TX, USA",
+    "description": "Provides data center solutions with a focus on scalability and performance for AI and cloud workloads.",
+    "careersUrl": "https://www.cyrusone.com/careers"
+  } ,
+  {
+    "name": "Flexential",
+    "website": "https://www.flexential.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Charlotte, NC, USA",
+    "description": "Provides data center and cloud solutions with a focus on flexibility and customer service for AI workloads.",
+    "careersUrl": "https://www.flexential.com/about/careers"
+  } ,
+  {
+    "name": "EdgeConneX",
+    "website": "https://www.edgeconnex.com",
+    "category": "datacenters",
+    "tags": ["AI", "edge computing", "data centers", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Herndon, VA, USA",
+    "description": "Specializes in edge data center solutions, optimizing AI workloads closer to end-users for reduced latency.",
+    "careersUrl": "https://www.edgeconnex.com/careers/"
+  } ,
+  {
+    "name": "IREN Limited",
+    "website": "https://iren.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "sustainability", "infrastructure"],
+    "ownership": "public",
+    "ticker": "IREN",
+    "marketCapBucket": "$5B-$10B",
+    "headquarters": "Sydney, Australia",
+    "description": "Leading Australian data center provider, focusing on sustainable and energy-efficient solutions for AI workloads.",
+    "careersUrl": "https://iren.com/careers"
+  } ,
+  {
+    "name": "Lumen Technologies",
+    "website": "https://www.lumen.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "LUMN",
+    "marketCapBucket": "$10B-$20B",
+    "headquarters": "Monroe, LA, USA",
+    "description": "Provides data center and cloud solutions with a focus on network performance and security for AI workloads.",
+    "careersUrl": "https://www.lumen.com/en-us/careers.html"  
+  } ,
+  {
+    "name": "NTT Global Data Centers",
+    "website": "https://www.nttglobaldatacenters.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Tokyo, Japan",
+    "description": "Global data center provider, offering scalable and secure solutions for AI and cloud workloads.",
+    "careersUrl": "https://www.nttglobaldatacenters.com/careers"  
+  } ,
+  {
+    "name": "Hut8",
+    "website": "https://www.hut8mining.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "blockchain", "infrastructure"],
+    "ownership": "public",
+    "ticker": "HUT",
+    "marketCapBucket": "$1B-$5B",
+    "headquarters": "Toronto, Canada",
+    "description": "Operates energy-efficient data centers, with a focus on blockchain and emerging technologies including AI.",
+    "careersUrl": "https://www.hut8mining.com/careers"  
+  } ,
+  {
+    "name": "TeraWulf",
+    "website": "https://www.terawulf.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "sustainability", "infrastructure"],
+    "ownership": "public",
+    "ticker": "WULF",
+    "marketCapBucket": "$1B-$5B",
+    "headquarters": "New York, NY, USA",
+    "description": "Focuses on sustainable data center solutions, leveraging renewable energy for AI and cloud workloads.",
+    "careersUrl": "https://www.terawulf.com/careers"  
+  } ,
+  {
+    "name": "EdgeMicro",
+    "website": "https://www.edgemicro.com",
+    "category": "datacenters",
+    "tags": ["AI", "edge computing", "data centers", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "Los Angeles, CA, USA",
+    "description": "Provides edge data center solutions, optimizing AI workloads closer to end-users for reduced latency.",
+    "careersUrl": "https://www.edgemicro.com/careers" 
+  } ,
+  {
+    "name": "EdgePresence",
+    "website": "https://www.edgepresence.com",
+    "category": "datacenters",
+    "tags": ["AI", "edge computing", "data centers", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "San Jose, CA, USA",
+    "description": "Specializes in edge data center solutions, optimizing AI workloads closer to end-users for reduced latency.",
+    "careersUrl": "https://www.edgepresence.com/careers" 
+  } ,
+  { 
+    "name": "Nebius",
+    "website": "https://www.nebius.com",
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "cloud", "infrastructure"],
+    "ownership": "public",
+    "ticker": "NBIS",
+    "marketCapBucket": "$25B-$100B",
+    "headquarters": "London, UK",
+    "description": "Provides data center and cloud solutions with a focus on scalability and performance for AI workloads.",
+    "careersUrl": "https://www.nebius.com/careers"
+  } ,
+  {
+    "name": "Applied Digital Corp",
+    "website": "https://www.applieddigital.com",  
+    "category": "datacenters",
+    "tags": ["AI", "data centers", "sustainability", "infrastructure"],
+    "ownership": "public",
+    "ticker": "APLD",
+    "marketCapBucket": "$5B-$10B",
+    "headquarters": "New York, NY, USA",
+    "description": "Focuses on sustainable data center solutions, leveraging renewable energy for AI and cloud workloads.",
+    "careersUrl": "https://www.applieddigital.com/careers"
+  } ,
+  {
+    "name": "Edgevana",
+    "website": "https://www.edgevana.com",
+    "category": "datacenters",
+    "tags": ["AI", "edge computing", "data centers", "infrastructure"],
+    "ownership": "private",
+    "ticker": "N/A",
+    "marketCapBucket": "N/A",
+    "headquarters": "San Jose, CA, USA",
+    "description": "Provides edge data center solutions, optimizing AI workloads closer to end-users for reduced latency.",
+    "careersUrl": "https://www.edgevana.com/careers"
+  }
 ]

@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Software Companies</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/themes.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
 </head>
-<body>
 
+<body>
 <header class="hero">
   <a href="/" aria-label="Home" class="site-title-link">
     <h1 class="site-title">Majestic Sierra</h1>
@@ -27,11 +32,7 @@
   </section>
 </main>
 
-  <!-- Footer Wrapper -->
-  <div id="footer-container">
-    <!-- Injected content from footer.html -->
-  </div>
-
+ 
 <script>
   console.log("✅ ai-software/index.html is running");
 
@@ -43,8 +44,6 @@
     document.getElementById(id).innerHTML = html;
   }
 
-  // Load footer
-  loadComponent("footer-container", "/footer.html");
 
   // Load and render companies by category
   fetch("/data/companies.json")
@@ -70,19 +69,28 @@
         card.className = "company-card";
         card.innerHTML = `
           <h2>${company.name}</h2>
-          <p>${company.description}</p>
-          <a href="${company.website}" target="_blank">Website</a> |
-          <a href="${company.careers}" target="_blank">Careers</a>
+          <p>${company.description || 'No description available.'}</p>
+          <p><strong>Headquarters:</strong> ${company.headquarters || 'N/A'}</p>
+          <p><strong>Ownership:</strong> ${company.ownership || 'N/A'}</p>
+          <p><strong>Ticker:</strong> ${company.ticker || 'N/A'}</p>
+          <p><strong>Market Cap:</strong> ${company.marketCapBucket || 'N/A'}</p>
+          <p><strong>Tags:</strong> ${(company.tags || []).join(', ') || 'N/A'}</p>
+          <p><a href="${company.website}" target="_blank" rel="noopener">Website</a></p>
+          ${company.careersUrl ? `<p><a href="${company.careersUrl}" target="_blank" rel="noopener">Careers</a></p>` : ''}
         `;
         container.appendChild(card);
       });
     })
     .catch(err => console.error("Error loading companies:", err));
-
-
-  // Load page-specific components if any (optional)
-  loadComponent("footer-container", "/footer.html");
 </script>
+  <script>
+    loadComponent("footer-container", "../components/footer.html");
+  </script>
+
+  <!-- Footer Wrapper -->
+  <div id="footer-container">
+    <!-- Injected content from footer.html -->
+  </div>
 
 
 </body>

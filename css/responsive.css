@@ -1,0 +1,48 @@
+
+/* ============================================
+   RESPONSIVE.CSS
+   Media queries and mobile-specific overrides
+   for layout, typography, and component scaling.
+
+   Targets:
+   - Mobile and tablet breakpoints
+   - Font and padding adjustments
+   - Layout reflows for smaller screens
+============================================ */
+
+
+/* ------------------------------
+   Responsive Adjustments
+--------------------------------- */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .company-card {
+    margin: 12px;
+    padding: 12px;
+  }
+
+  .company-card a {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+ .hero {
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .quote-block {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 4rem;
+  }
+}
+
+
