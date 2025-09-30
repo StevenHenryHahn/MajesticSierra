@@ -21,16 +21,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies from repo root
-        working-directory: ${{ github.workspace }}
+      - name: Show repo contents
+        run: ls -la
+
+      - name: Install dependencies
         run: npm install
 
-      - name: Verify node-fetch presence
-        working-directory: ${{ github.workspace }}
-        run: node -e "require('node-fetch'); console.log('node-fetch is available')"
+      - name: List installed modules
+        run: npm ls --depth=0
 
       - name: Run ingestion script
-        working-directory: ${{ github.workspace }}
         run: node js/news-ingestor.js
 
       - name: Log timestamp
