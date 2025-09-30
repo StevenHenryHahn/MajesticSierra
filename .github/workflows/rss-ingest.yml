@@ -12,10 +12,6 @@ jobs:
   ingest-news:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: .
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -25,13 +21,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install dependencies from repo root
+        working-directory: ${{ github.workspace }}
         run: npm install
 
       - name: Verify node-fetch presence
+        working-directory: ${{ github.workspace }}
         run: node -e "require('node-fetch'); console.log('node-fetch is available')"
 
       - name: Run ingestion script
+        working-directory: ${{ github.workspace }}
         run: node js/news-ingestor.js
 
       - name: Log timestamp
